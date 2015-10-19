@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Listagem de produtos</title>
+	<title>Listagem de serviços</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
@@ -14,6 +14,7 @@
 
 </head>
 <body>
+	<!-- navegation -->
 	<header class="header">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -48,13 +49,15 @@
 						</li>
 						<li><a href="#agenda">Agendamento de serviços</a></li>
 					</ul>
-				</div><!--/.nav-collapse -->
+				</div>
 			</div>
 		</nav>	
 	</header>
+	<!-- /navegation -->
 	<section class="container-main">
 		<div class="container-fluid">
 			<div class="row">
+				<!-- barra de pesquisa -->
 				<div class="control-consulta col-md-2">
 					<h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
 					<div class="form-group">
@@ -71,32 +74,15 @@
                         <button class="btn btn-default" type="button">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         </button>
-                    </span>
+                    	</span>
                     </div>
 					<ul class="style-menu">
 						<li class="category">
-							Categoria
+							Serviço
 							<span class="glyphicon glyphicon-chevron-right icon-arrow" aria-hidden="true"></span>
 							<ul class="sub-category">
-								<li><input type="checkbox" name="" value=""> Alimentos</li>
-								<li><input type="checkbox" name="" value=""> Brinquedos</li>
-							</ul>
-						</li>
-						<li class="category">
-							Ração
-							<span class="glyphicon glyphicon-chevron-right icon-arrow" aria-hidden="true"></span>
-							<ul class="sub-category">
-								<li><input type="checkbox" name="" value=""> Ração Royal</li>
-								<li><input type="checkbox" name="" value=""> Ração Dog </li>
-								<li><input type="checkbox" name="" value=""> Ração Proo </li>
-							</ul>
-						</li>
-						<li class="category">
-							Marca
-							<span class="glyphicon glyphicon-chevron-right icon-arrow" aria-hidden="true"></span>
-							<ul class="sub-category">
-								<li><input type="checkbox" name="" value=""> Granplus</li>
-								<li><input type="checkbox" name="" value=""> Dog Chow</li>
+								<li><input type="checkbox" name="" value="">Banho</li>
+								<li><input type="checkbox" name="" value="">Tosa</li>
 							</ul>
 						</li>
 					</ul>
@@ -104,6 +90,8 @@
 						<button type="button" class="btn btn-success">Novo registro</button>
 					</div>
 				</div>
+				<!-- /barra de pesquisa -->
+				<!-- tabela -->
 				<div class="tabela-main col-md-10">
 					<table class="table table-hover">
 						<caption>Optional table caption.</caption>
@@ -111,21 +99,15 @@
 							<tr>
 								<th>#</th>
 								<th>Descrição</th>
-								<th>Categoria</th>
-								<th>Marca</th>
 								<th>Preço</th>
-								<th>Quantidade</th>
 								<th>Opções</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<th scope="row">1</th>
-								<td>Ração</td>
-								<td>Alimentos</td>
-								<td>Pedigree</td>
+								<td>Tosa</td>
 								<td>20R$</td>
-								<td>10</td>
 								<td>
 									<button type="button" class="btn btn btn-primary">Editar</button>
 									<button type="button" class="btn btn-danger">Excluir</button>
@@ -133,23 +115,8 @@
 							</tr>
 							<tr>
 								<th scope="row">2</th>
-								<td>Ração</td>
-								<td>Alimentos</td>
-								<td>Pedigree</td>
+								<td>Banho</td>
 								<td>20R$</td>
-								<td>10</td>
-								<td>
-									<button type="button" class="btn btn btn-primary">Editar</button>
-									<button type="button" class="btn btn-danger">Excluir</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Ração</td>
-								<td>Alimentos</td>
-								<td>Pedigree</td>
-								<td>20R$</td>
-								<td>10</td>
 								<td>
 									<button type="button" class="btn btn btn-primary">Editar</button>
 									<button type="button" class="btn btn-danger">Excluir</button>
@@ -158,10 +125,9 @@
 						</tbody>
 					</table>
 				</div>
+				<!-- /tabela -->
 			</div>
 		</div>
-
-
 	</section>
 </body>
 </html>

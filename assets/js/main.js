@@ -1,7 +1,7 @@
 $(function(){
-	$(".category").click(function(){
-		$(this).find("ul").slideToggle()
-		$(this).find("span").toggleClass("open-arrow");
+	$(".icon-arrow").click(function(){
+		$(this).next("ul").slideToggle()
+		$(this).toggleClass("open-arrow");
 	});
 
 	$(".sub-category").click(function(){
