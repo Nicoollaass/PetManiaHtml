@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Listagem de clientes</title>
+	<title>Cadastro de Animais - PetMania</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/cliente.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/animal.css">
 	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
@@ -73,45 +73,41 @@
 					</div>
 				</div>
 				<!-- /barra de pesquisa -->
-				<!-- tabela -->
-				<div class="tabela-main col-md-10">
-					<table class="table table-hover">
-						<caption>Optional table caption.</caption>
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Nome</th>
-								<th>Idade</th>
-								<th>E-mail</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Nicolas</td>
-								<td>19</td>
-								<td>nicolas_silva_santos@outlook.com</td>
-								<td>
-									<button type="button" class="btn btn-info">+ Info</button>
-									<button type="button" class="btn btn btn-primary">Editar</button>
-									<button type="button" class="btn btn-danger">Excluir</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Nicolas</td>
-								<td>19</td>
-								<td>nicolas_silva_santos@outlook.com</td>
-								<td>
-									<button type="button" class="btn btn-info">+ Info</button>
-									<button type="button" class="btn btn btn-primary">Editar</button>
-									<button type="button" class="btn btn-danger">Excluir</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<!-- section clientes -->
+				<div class="content-main col-md-10">
+					<div class="conteiner-fluid">
+							
+							<div class="row">
+								<div class="col-md-12">
+									<h1>Cadastro de Animais</h1>		
+								</div>	
+								<div class="col-md-4 style-input">
+									<input type="text" class="form-control " placeholder="Nome Animal...">
+								</div>
+								<div class="col-md-4 style-input">
+									<input type="text" class="form-control " placeholder="Proprietário...">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2 style-input">
+									<input type="text" class="form-control " placeholder="Espécie">
+								</div>
+								<div class="col-md-3 style-input">
+									<input type="CPF" class="form-control " placeholder="CPF">
+								</div>
+								<div class="col-md-3 style-input">
+									<input type="Telefone" class="form-control " placeholder="Telefone">
+								</div>
+
+							<div class="col-md-5 style-input">
+								<input type="Email" class="form-control " placeholder="E-Mail">
+							</div>
+
+							
+						</div>
+					</div>
 				</div>
-				<!-- /tabela -->
+				<!-- section clientes -->
 			</div>
 		</div>
 	</section>
