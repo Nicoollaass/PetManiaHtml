@@ -79,3 +79,10 @@ body,html {
 .content-main {
 	margin-top: 76px;
 }
+
+/*style inputs aplication*/
+
+.style-input {
+	min-width: 189px;
+	margin-bottom: 20px
+}

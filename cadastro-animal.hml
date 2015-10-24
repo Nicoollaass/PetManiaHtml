@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro de Animais - PetMania</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/animal.css">
+	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+</head>
+<body>
+	<!-- navegation -->
+	<header class="header">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Icon pet</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Vendas</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listar<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Produto</a></li>
+								<li><a href="#">Serviços</a></li>
+								<li><a href="#">Funcionarios</a></li>
+								<li><a href="#">Clientes</a></li>
+								<li><a href="#">Animais</a></li>
+								<li><a href="#">Filiais</a></li>
+							</ul>
+						</li>						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendas<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Produto</a></li>
+								<li><a href="#">Serviços</a></li>
+							</ul>
+						</li>
+						<li><a href="#agenda">Agendamento de serviços</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>	
+	</header>
+	<!-- /navegation -->
+	<section class="container-main">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- barra de pesquisa -->
+				<div class="control-consulta col-md-2">
+					<h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
+					<div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Nome...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    	</span>
+                    </div>
+					<div>
+						<button type="button" class="btn btn-success">Novo registro</button>
+					</div>
+				</div>
+				<!-- /barra de pesquisa -->
+				<!-- section clientes -->
+				<div class="content-main col-md-10">
+					<div class="conteiner-fluid">
+							
+							<div class="row">
+								<div class="col-md-12">
+									<h1>Cadastro de Animais</h1>		
+								</div>	
+								<div class="col-md-4 style-input">
+									<input type="text" class="form-control " placeholder="Nome Animal...">
+								</div>
+								<div class="col-md-4 style-input">
+									<input type="text" class="form-control " placeholder="Proprietário...">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2 style-input">
+									<input type="text" class="form-control " placeholder="Espécie">
+								</div>
+								<div class="col-md-3 style-input">
+									<input type="CPF" class="form-control " placeholder="CPF">
+								</div>
+								<div class="col-md-3 style-input">
+									<input type="Telefone" class="form-control " placeholder="Telefone">
+								</div>
+
+							<div class="col-md-5 style-input">
+								<input type="Email" class="form-control " placeholder="E-Mail">
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+				<!-- section clientes -->
+			</div>
+		</div>
+	</section>
+</body>
+</html>
