@@ -79,6 +79,29 @@ LOCK TABLES `categoria` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `categoria_servico`
+--
+
+DROP TABLE IF EXISTS `categoria_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categoria_servico` (
+  `ID_CATEGORIA_SERVICO` int(11) NOT NULL AUTO_INCREMENT,
+  `DESCRICAO` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID_CATEGORIA_SERVICO`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categoria_servico`
+--
+
+LOCK TABLES `categoria_servico` WRITE;
+/*!40000 ALTER TABLE `categoria_servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categoria_servico` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cliente`
 --
 
@@ -106,6 +129,148 @@ CREATE TABLE `cliente` (
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `estoque_produto`
+--
+
+DROP TABLE IF EXISTS `estoque_produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estoque_produto` (
+  `ID_ESTOQUE_PROD` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_PRODUTO_ESTOQUE` int(11) NOT NULL,
+  `QUANTIDADE` int(11) NOT NULL,
+  PRIMARY KEY (`ID_ESTOQUE_PROD`),
+  KEY `ID_PRODUTO_idx` (`ID_PRODUTO_ESTOQUE`),
+  CONSTRAINT `ID_PRODUTO_ESTOQUE` FOREIGN KEY (`ID_PRODUTO_ESTOQUE`) REFERENCES `produto` (`ID_PRODUTO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estoque_produto`
+--
+
+LOCK TABLES `estoque_produto` WRITE;
+/*!40000 ALTER TABLE `estoque_produto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `estoque_produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `funcionario`
+--
+
+DROP TABLE IF EXISTS `funcionario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `funcionario` (
+  `ID_FUNCIONARIO` int(11) NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(255) NOT NULL,
+  `ID_TIPO_FUNIONARIO` int(11) NOT NULL,
+  `DATA_NASCIMENTO` date NOT NULL,
+  `EMAIL` varchar(255) NOT NULL,
+  `CPF` varchar(45) NOT NULL,
+  `DATA_INCLUSAO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_FUNCIONARIO`),
+  KEY `ID_TIPO_FUNCIONARIO_idx` (`ID_TIPO_FUNIONARIO`),
+  CONSTRAINT `ID_TIPO_FUNCIONARIO` FOREIGN KEY (`ID_TIPO_FUNIONARIO`) REFERENCES `tipo_funcionario` (`ID_TIPO_FUNCIONARIO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `funcionario`
+--
+
+LOCK TABLES `funcionario` WRITE;
+/*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `item_venda_produto`
+--
+
+DROP TABLE IF EXISTS `item_venda_produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `item_venda_produto` (
+  `ID_ITEM_PRODUTO` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_VENDA_PRODUTO` int(11) NOT NULL,
+  `ID_PRODUTO` int(11) NOT NULL,
+  `QUANTIDADE` int(11) NOT NULL,
+  `PRECO_TOTAL` decimal(11,2) NOT NULL,
+  PRIMARY KEY (`ID_ITEM_PRODUTO`),
+  KEY `ID_VENDA_PRODUTO_idx` (`ID_VENDA_PRODUTO`),
+  KEY `ID_PRODUTO_idx` (`ID_PRODUTO`),
+  CONSTRAINT `ID_PRODUTO` FOREIGN KEY (`ID_PRODUTO`) REFERENCES `produto` (`ID_PRODUTO`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ID_VENDA_PRODUTO` FOREIGN KEY (`ID_VENDA_PRODUTO`) REFERENCES `venda_produto` (`ID_VENDA_PRODUTO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item_venda_produto`
+--
+
+LOCK TABLES `item_venda_produto` WRITE;
+/*!40000 ALTER TABLE `item_venda_produto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `item_venda_produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `item_venda_servico`
+--
+
+DROP TABLE IF EXISTS `item_venda_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `item_venda_servico` (
+  `ID_ITEM_SERVICO` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_VENDA_SERVICO` int(11) NOT NULL,
+  `ID_SERVICO` int(11) NOT NULL,
+  `QUANTIDADE` int(11) NOT NULL,
+  `PRECO_TOTAL` decimal(11,2) NOT NULL,
+  PRIMARY KEY (`ID_ITEM_SERVICO`),
+  KEY `ID_VENDA_SERVICO_idx` (`ID_VENDA_SERVICO`),
+  KEY `ID_SERVICO_idx` (`ID_SERVICO`),
+  CONSTRAINT `ID_SERVICO` FOREIGN KEY (`ID_SERVICO`) REFERENCES `servico` (`ID_SERVICO`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ID_VENDA_SERVICO` FOREIGN KEY (`ID_VENDA_SERVICO`) REFERENCES `venda_servico` (`ID_VENDA_SERVICO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item_venda_servico`
+--
+
+LOCK TABLES `item_venda_servico` WRITE;
+/*!40000 ALTER TABLE `item_venda_servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `item_venda_servico` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `log_siada_produto`
+--
+
+DROP TABLE IF EXISTS `log_siada_produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `log_siada_produto` (
+  `ID_LOG_SAIDA_PRODUTO` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_VENDA_PRODUTO` int(11) NOT NULL,
+  `DATA_ALTERACAO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_LOG_SAIDA_PRODUTO`),
+  KEY `ID_VENDA_PRODUTO_LOG_idx` (`ID_VENDA_PRODUTO`),
+  CONSTRAINT `ID_VENDA_PRODUTO_LOG` FOREIGN KEY (`ID_VENDA_PRODUTO`) REFERENCES `venda_produto` (`ID_VENDA_PRODUTO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `log_siada_produto`
+--
+
+LOCK TABLES `log_siada_produto` WRITE;
+/*!40000 ALTER TABLE `log_siada_produto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_siada_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -238,6 +403,35 @@ LOCK TABLES `raca` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `servico`
+--
+
+DROP TABLE IF EXISTS `servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `servico` (
+  `ID_SERVICO` int(11) NOT NULL AUTO_INCREMENT,
+  `DESCRICAO` varchar(45) NOT NULL,
+  `DATA_ENTRADA` datetime NOT NULL,
+  `DATA_INCLUSAO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `PRECO` decimal(11,2) NOT NULL,
+  `ID_CATEGORIA_SERVICO` int(11) NOT NULL,
+  PRIMARY KEY (`ID_SERVICO`),
+  KEY `ID_CATEGORIA_SERVICO_idx` (`ID_CATEGORIA_SERVICO`),
+  CONSTRAINT `ID_CATEGORIA_SERVICO` FOREIGN KEY (`ID_CATEGORIA_SERVICO`) REFERENCES `categoria_servico` (`ID_CATEGORIA_SERVICO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `servico`
+--
+
+LOCK TABLES `servico` WRITE;
+/*!40000 ALTER TABLE `servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `servico` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tipo_animal`
 --
 
@@ -259,6 +453,87 @@ LOCK TABLES `tipo_animal` WRITE;
 /*!40000 ALTER TABLE `tipo_animal` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tipo_animal` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `tipo_funcionario`
+--
+
+DROP TABLE IF EXISTS `tipo_funcionario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tipo_funcionario` (
+  `ID_TIPO_FUNCIONARIO` int(11) NOT NULL AUTO_INCREMENT,
+  `DESCRICAO` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID_TIPO_FUNCIONARIO`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipo_funcionario`
+--
+
+LOCK TABLES `tipo_funcionario` WRITE;
+/*!40000 ALTER TABLE `tipo_funcionario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `venda_produto`
+--
+
+DROP TABLE IF EXISTS `venda_produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `venda_produto` (
+  `ID_VENDA_PRODUTO` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_CLIENTE_PROD` int(11) NOT NULL,
+  `ID_FUNCIONARIO_PROD` int(11) NOT NULL,
+  `DATA_VENDA` datetime NOT NULL,
+  PRIMARY KEY (`ID_VENDA_PRODUTO`),
+  KEY `ID_CLIENTE_idx` (`ID_CLIENTE_PROD`),
+  KEY `ID_FUNCIONARIO_idx` (`ID_FUNCIONARIO_PROD`),
+  CONSTRAINT `ID_CLIENTE_PROD` FOREIGN KEY (`ID_CLIENTE_PROD`) REFERENCES `cliente` (`ID_CLIENTE`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ID_FUNCIONARIO_PROD` FOREIGN KEY (`ID_FUNCIONARIO_PROD`) REFERENCES `funcionario` (`ID_TIPO_FUNIONARIO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `venda_produto`
+--
+
+LOCK TABLES `venda_produto` WRITE;
+/*!40000 ALTER TABLE `venda_produto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `venda_produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `venda_servico`
+--
+
+DROP TABLE IF EXISTS `venda_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `venda_servico` (
+  `ID_VENDA_SERVICO` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_CLIENTE_SERVICO` int(11) NOT NULL,
+  `ID_FUNCIONARIO_SERVICO` int(11) NOT NULL,
+  `DATA_VENDA` datetime NOT NULL,
+  PRIMARY KEY (`ID_VENDA_SERVICO`),
+  KEY `ID_CLIENTE_SERVICO_idx` (`ID_CLIENTE_SERVICO`),
+  KEY `ID_FUNCIONARIO_idx` (`ID_FUNCIONARIO_SERVICO`),
+  CONSTRAINT `ID_CLIENTE_SERVICO` FOREIGN KEY (`ID_CLIENTE_SERVICO`) REFERENCES `cliente` (`ID_CLIENTE`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `ID_FUNCIONARIO_SERVICO` FOREIGN KEY (`ID_FUNCIONARIO_SERVICO`) REFERENCES `tipo_funcionario` (`ID_TIPO_FUNCIONARIO`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `venda_servico`
+--
+
+LOCK TABLES `venda_servico` WRITE;
+/*!40000 ALTER TABLE `venda_servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `venda_servico` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -269,4 +544,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-23 22:07:26
+-- Dump completed on 2015-10-24 15:26:46
