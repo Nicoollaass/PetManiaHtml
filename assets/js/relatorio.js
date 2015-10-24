@@ -1,32 +1,22 @@
-// Load the Visualization API and the piechart package.
-google.load('visualization', '1.0', {'packages':['charteditor']});
+ google.load("visualization", "1.1", {packages:["bar"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses', 'Profit'],
+      ['2014', 1000, 400, 200],
+      ['2015', 1170, 460, 250],
+      ['2016', 660, 1120, 300],
+      ['2017', 1030, 540, 350]
+    ]);
 
-// Set a callback to run when the Google Visualization API is loaded.
-google.setOnLoadCallback(drawChart);
+    var options = {
+      chart: {
+        title: 'Company Performance',
+        subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+      }
+    };
 
-// Callback that creates and populates a data table, 
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawChart() {
-  	// Create the data table.
-  	var data = new google.visualization.DataTable();
-  	data.addColumn('string', 'Topping');
-  	data.addColumn('number', 'Slices');
-  	data.addRows([
-  		['Mushrooms', 2],
-  		['Onions', 2],
-  		['Olives', 2],
-  		['Zucchini', 2],
-  		['Pepperoni', 2]
-  	]);
+    var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-  	// Set chart options
-  	var options = {'title':'How Much Pizza I Ate Last Night',
-  	'width':1200,
-  	'height':800};
-
-  	// Instantiate and draw our chart, passing in some options.
-  	var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-  	chart.draw(data, options);
-
-}
+    chart.draw(data, options);
+  }
