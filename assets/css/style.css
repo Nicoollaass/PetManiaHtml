@@ -75,3 +75,7 @@ body,html {
 	background: #F6F8F7;
 	border-right: 1px solid #cecece;
 }
+
+.content-main {
+	margin-top: 76px;
+}
