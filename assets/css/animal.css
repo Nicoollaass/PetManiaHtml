@@ -1,5 +1,30 @@
-.top-buffer-2 { margin-top:20px; }
-.top-buffer-3 { margin-top:30px; }
-.top-buffer-4 { margin-top:40px; }
+.Animal-background{
+	background-image:url(../img/cadastro-animais-petMania.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	background-position:center;
+	margin-top:50px;
+    height: 100%;
+	}
+ 
+.Animal-border-radius{
+	border-radius: 10px;
+	background-color:#FFFFFF;
+	opacity: 0.90;
+    filter: alpha(opacity=90);
+	margin-top:20px;
+	}
+	
+.Animal-float-right {float:right};
+
+.top-buffer-menos { margin-top:-20px; }
+
+.Animal-top-buffer-4 { 
+	margin-top:40px;
+	margin-bottom:40px;
+ }
 
 .margin-right-buffer-8 { margin-right:80px; }
+.margin-right-buffer-12 { margin-right:120px; }
+
