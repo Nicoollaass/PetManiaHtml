@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cadastro de Animais - PetMania</title>
+	<title>Cadastro de Serviços - PetMania</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/animal.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/servico.css">
 	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
@@ -75,76 +75,33 @@
 				<!-- /barra de pesquisa -->
 				<!-- section clientes -->
 				<div class="content-main col-md-10">	
-					<div class="conteiner-fluid col-md-12">
+					<div class="conteiner-fluid col-md-10 Animal-border-radius">
 						<div class="row">
 							<div class="col-md-12">
-								<h1>Cadastro de Animais</h1>
+								<h1>Cadastro de Serviços</h1>
 							</div>
 						</div>
+                        	
                         <div class="row">				
-							<div class="col-md-5 Animal-Label-bottom">
-								<label ><h4 >Cliente:</h4></label>
+							<div class="col-md-8 Servico-Label-bottom">
+								<label><h4>Descrição:</h4></label>
 							</div>
-							<div class="col-md-4 Animal-Label-bottom">
-								<label><h4>Nome do Animal:</h4></label>
+							<div class="col-md-4 Servico-Label-bottom">
+								<label><h4>Preço:</h4></label>
 							</div>
-                            <div class="col-md-3 Animal-Label-bottom">
-								<label><h4>Idade:</h4></label>
+                        </div>
+                        
+						<div class="row">								
+							<div class="col-md-8 style-input">
+								<input type="select" class="form-control " placeholder="Descrição...">
 							</div>
-                        </div>                            	
-						<div class="row top-buffer-mais">								
-							<div class="col-md-5 form-group">
-								<select class="form-control" id="Cliente">
-									<option>Cliente</option>
-								</select>
-							</div>
-                            <div class="col-md-4 style-input">
-								<input type="select" class="form-control " placeholder="Nome do Animal...">
-							</div>
-							<div class="col-md-3 style-input">
-								<input type="text" class="form-control inputAnimal-float-right" placeholder="Idade...">
+							<div class="col-md-4 style-input">
+								<input type="text" class="form-control inputAnimal-float-right" placeholder="Preço...">
 							</div>
 						</div>
-                        <div class="row">				
-							<div class="col-md-3 Animal-Label-bottom">
-								<label ><h4 >Tipo Animal:</h4></label>
-							</div>
-							<div class="col-md-3 Animal-Label-bottom">
-								<label><h4>Raça:</h4></label>
-							</div>
-                            <div class="col-md-3 Animal-Label-bottom">
-								<label><h4>Idade:</h4></label>
-							</div>
-                            <div class="col-md-3 Animal-Label-bottom">
-								<label><h4>Porte:</h4></label>
-							</div>
-                        </div>   
+												
 						<div class="row">
-							<div class="col-md-3 form-group">
-								<select class="form-control" id="Tipo Animal">
-									<option>Idade</option>
-								</select>
-							</div>	
-                            <div class="col-md-3 form-group">
-								<select class="form-control" id="Raca">
-									<option>Raça...</option>
-								</select>
-							</div>		
-							<div class="col-md-3 form-group">
-								<select class="form-control" id="Cor">
-									<option>Cor...</option>
-								</select>
-							</div>
-							<div class="col-md-3 form-group">
-								<select class="form-control inputAnimal-float-right" id="Porte">
-									<option>Porte</option>
-								</select>
-							</div>
-						</div>
-						<div class="row">
-						</div>						
-						<div class="row">
-							<div class="col-md-12 text-right Animal-top-buffer-4  ">
+							<div class="col-md-12 text-right servico-top-buffer-4">
 								<button type="button" class="btn btn-success">Cadastrar</button>
 								<button type="button" class="btn btn-warning">Limpar</button>
 								<button type="button" class="btn btn-danger">Cancelar</button>

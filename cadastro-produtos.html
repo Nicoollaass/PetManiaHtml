@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/cliente.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/produtos.css">
 	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
@@ -79,61 +79,56 @@
 						<form action="" method="" accept-charset="utf-8">
 							<div class="row">
 								<div class="col-md-12">
-									<h1>Novo Cliente</h1>		
-								</div>
-							</div>	
+								  <h1>Cadastro de Produtos</h1>
+								</div>	
+                            </div>  	
 						<div class="row">				
-							<div class="col-md-6 Cliente-Label-bottom">
-								<label><h4>Nome:</h4></label>
+							<div class="col-md-6 Produtos-Label-bottom">
+								<label><h4>Descrição:</h4></label>
 							</div>
-						</div>
-                        	<div class="row">
-								<div class="col-md-12 style-input">
-									<input type="text" class="form-control " placeholder="nome...">
-								</div>
+							<div class="col-md-3 Produtos-Label-bottom">
+								<label><h4>Categoria:</h4></label>
 							</div>
-                        <div class="row">				
-							<div class="col-md-2 Cliente-Label-bottom">
-								<label><h4>Data Nasc.:</h4></label>
-							</div>
-                            <div class="col-md-3 Cliente-Label-bottom">
-								<label><h4>CPF:</h4></label>
-							</div>
-                            <div class="col-md-3 Cliente-Label-bottom">
-								<label><h4>Telefone:</h4></label>
-							</div>
-						</div>
-                        <div class="row">	
-								<div class="col-md-2 style-input">
-									<input type="Date" class="form-control " placeholder="data nascimento">
-								</div>
-
-								<div class="col-md-3 style-input">
-									<input type="CPF" class="form-control " placeholder="cpf">
-								</div>
-
-								<div class="col-md-3 style-input">
-									<input type="Telefone" class="form-control " placeholder="telefone">
-								</div>
-						</div>
-                        <div class="row">	
-								<div class="col-md-3 Cliente-Label-bottom">
-								<label><h4>E-mail:</h4></label>
-								</div>
                         </div>
-                        <div class="row">	
-                              	<div class="col-md-5 style-input">
-									<input type="email" class="form-control " placeholder="email">
-								</div>
-								<div class="col-md-5 style-input">
-
-									<label for="sex">Sexo:</label>
-									<input type="radio" name="sex" value="Homem" checked=""> Homem
-									<input type="radio" name="sex" value="Mulher"> Mulher
-								</div>
+                        
+						<div class="row">								
+							<div class="col-md-6 style-input">
+								<input type="select" class="form-control " placeholder="Descrição...">
 							</div>
-							<div class="row">
-								<div class="col-md-12 text-right">
+							<div class="col-md-5 form-group">
+								<select class="form-control" id="Cliente">
+									<option>Categoria...</option>
+								</select>
+							</div>
+						</div>
+                        <div class="row">				
+							<div class="col-md-5 Produtos-Label-bottom">
+								<label><h4>Marca:</h4></label>
+							</div>
+							<div class="col-md-3 Produtos-Label-bottom">
+								<label><h4>Preço:</h4></label>
+							</div>
+                            <div class="col-md-3 Produtos-Label-bottom">
+								<label><h4>Quantidade:</h4></label>
+							</div>
+                        </div>
+                        <div class="row">								
+							<div class="col-md-5 form-group">
+								<select class="form-control" id="Cliente">
+									<option>Marca...</option>
+								</select>
+							</div>
+                            <div class="col-md-3 style-input">
+								<input type="select" class="form-control " placeholder="Preço...">
+							</div>
+                            <div class="col-md-3 style-input">
+								<input type="select" class="form-control " placeholder="Quantidade...">
+							</div>
+							
+						</div>
+                                
+							<div class="row margin-right-buffer-8">
+								<div class="col-md-12 text-right ">
 									<button type="button" class="btn btn-success">Salvar</button>
 									<button type="button" class="btn btn-warning">Limpar</button>
 									<button type="button" class="btn btn-danger">Cancelar</button>
