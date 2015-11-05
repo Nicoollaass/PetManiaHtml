@@ -2,7 +2,7 @@
 <!-- saved from url=(0058)file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="UTF-8">
-	<title>Listagem de clientes</title>
+	<title>Cadastro de Produtos - Pet Mania</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
@@ -93,10 +93,10 @@
                         
 						<div class="row">								
 							<div class="col-md-6 style-input">
-								<input type="select" class="form-control " placeholder="Descrição...">
+								<input type="select" name="descricao" value="descricao" class="form-control " placeholder="Descrição...">
 							</div>
 							<div class="col-md-5 form-group">
-								<select class="form-control" id="Cliente">
+								<select class="form-control" name="id_categoria" value="id_categoria"  id="categoria">
 									<option>Categoria...</option>
 								</select>
 							</div>
@@ -114,24 +114,24 @@
                         </div>
                         <div class="row">								
 							<div class="col-md-5 form-group">
-								<select class="form-control" id="Cliente">
+								<select class="form-control" name="marca" value="marca" id="Cliente">
 									<option>Marca...</option>
 								</select>
 							</div>
                             <div class="col-md-3 style-input">
-								<input type="select" class="form-control " placeholder="Preço...">
+								<input type="select" name="preco" value="preco" class="form-control " placeholder="Preço...">
 							</div>
                             <div class="col-md-3 style-input">
-								<input type="select" class="form-control " placeholder="Quantidade...">
+								<input type="select" name="quantidade" value="quantidade" class="form-control " placeholder="Quantidade...">
 							</div>
 							
 						</div>
                                 
 							<div class="row margin-right-buffer-8">
 								<div class="col-md-12 text-right ">
-									<button type="button" class="btn btn-success">Salvar</button>
-									<button type="button" class="btn btn-warning">Limpar</button>
-									<button type="button" class="btn btn-danger">Cancelar</button>
+									<button type="button" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
+									<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
+									<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
 						</form>
