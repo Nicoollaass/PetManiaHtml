@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/servico.css">
+
+    <script type="text/javascript" src="assets/js/validacao-servico.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
@@ -75,6 +77,8 @@
 				<!-- /barra de pesquisa -->
 				<!-- section clientes -->
 				<div class="content-main col-md-10">	
+                <form class="cmxform" id="servicosForm" method="get" action="">
+                <fieldset>
 					<div class="conteiner-fluid col-md-10 Animal-border-radius">
 						<div class="row">
 							<div class="col-md-12">
@@ -93,21 +97,22 @@
                         
 						<div class="row">								
 							<div class="col-md-8 style-input">
-								<input type="select" name="descricao" value="descricao" class="form-control " placeholder="Descrição...">
+								<input type="select" name="descricao" value="descricao" class="form-control " placeholder="Descrição..." required>
 							</div>
 							<div class="col-md-4 style-input">
-								<input type="text" name="preco" value="preco" class="form-control inputAnimal-float-right" placeholder="Preço...">
+								<input type="text" name="preco" value="preco" class="form-control inputAnimal-float-right" placeholder="Preço..." required>
 							</div>
 						</div>
 												
 						<div class="row">
 							<div class="col-md-12 text-right servico-top-buffer-4">
-								<button type="button" name="cadastrar" value="cadastrar" class="btn btn-success">Cadastrar</button>
+								<button type="submit" name="cadastrar" value="cadastrar" class="btn btn-success">Cadastrar</button>
 								<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
 								<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
 							</div>
 						</div>
-                        					
+                        	 </fieldset>
+                        </form>				
 					</div>
 				</div>
 			</div>

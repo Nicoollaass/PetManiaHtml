@@ -8,10 +8,24 @@
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/cliente.css">
+
+   	<script type="text/javascript" src="assets/js/validacao-cliente.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
-
+<script>
+ $("#clienteForm").validate({
+   rules: {
+     // no quoting necessary
+     nome: "required",
+	 data_nascimento:  "required",
+     // quoting necessary!
+     "user[email]": "email",
+     // dots need quoting, too!
+     "user.address.street": "required"
+   }
+ });
+ </script>
 </head>
 <body>
 	<!-- navegation -->
@@ -59,7 +73,9 @@
 			<div class="row">
 				<!-- barra de pesquisa -->
 				<div class="control-consulta col-md-2">
-					<h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
+					<form class="clienteForm" id="clienteForm"  method="get" action="">
+                    <fieldset>
+                    <h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
 					<div class="input-group custom-search-form">
 						<input type="text" class="form-control" placeholder="Nome...">
 						<span class="input-group-btn">
@@ -76,7 +92,7 @@
 				<!-- section clientes -->
 				<div class="content-main col-md-10">
 					<div class="conteiner-fluid">
-						<form action="" method="" accept-charset="utf-8">
+						
 							<div class="row">
 								<div class="col-md-12">
 									<h1>Novo Cliente</h1>		
@@ -89,7 +105,7 @@
 						</div>
                         	<div class="row">
 								<div class="col-md-12 style-input">
-									<input type="text" name="nome" value="nome" class="form-control " placeholder="nome...">
+									<input type="text" id="nome" value="Nome" name="nome" minlength="2" class="form-control " placeholder="nome..." required>
 								</div>
 							</div>
                         <div class="row">				
@@ -105,25 +121,27 @@
 						</div>
                         <div class="row">	
 								<div class="col-md-2 style-input">
-									<input type="Date" name="data_nascimento" value="data_nascimento" class="form-control " placeholder="data nascimento">
+									<input type="Date" name="data_nascimento" value="data_nascimento"  minlength="8" class="form-control " placeholder="data nascimento" required>
 								</div>
 
 								<div class="col-md-3 style-input">
-									<input type="CPF" name="cpf" value="cpf" class="form-control " placeholder="cpf">
+									<input type="CPF" name="cpf" value="cpf" class="form-control " placeholder="cpf" required>
 								</div>
 
 								<div class="col-md-3 style-input">
-									<input type="Telefone" name="telefone" value="telefone" class="form-control " placeholder="telefone">
+									<input type="Telefone" name="telefone" value="telefone" class="form-control " placeholder="telefone..." required>
 								</div>
 						</div>
-                        <div class="row">	
+                        <div class="row">
+                        
 								<div class="col-md-3 Cliente-Label-bottom">
 								<label><h4>E-mail:</h4></label>
 								</div>
                         </div>
                         <div class="row">	
                               	<div class="col-md-5 style-input">
-									<input type="email" name="email" value="email" class="form-control " placeholder="email">
+
+									<input type="email" name="email" value="email" class="form-control " placeholder="email" required>
 								</div>
 								<div class="col-md-5 style-input">
 
@@ -134,12 +152,13 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12 text-right">
-									<button type="button" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
+									<button type="submit" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
 									<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
 									<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
-						</form>
+						 </fieldset>
+                        </form>
 					</div>
 				</div>
 				<!-- section clientes -->

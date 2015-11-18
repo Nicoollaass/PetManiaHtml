@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/raca.css">
+    
+   	<script type="text/javascript" src="assets/js/validacao-racas.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
@@ -75,6 +77,8 @@
 				<!-- /barra de pesquisa -->
 				<!-- section clientes -->
 				<div class="content-main col-md-10">
+                <form class="cmxform" id="racaForm" method="get" action="">
+                <fieldset>
 					<div class="conteiner-fluid col-md-10">
 						<form action="" method="" accept-charset="utf-8">
                         <div class="row Servico-titulo">
@@ -90,21 +94,22 @@
                         </div>
                         <div class="row">
 							<div class="col-md-12 style-input">
-								<input type="text" name="descricao" value="descricao" class="form-control " placeholder="nome da raça...">
+								<input type="text" name="descricao" value="descricao" class="form-control " placeholder="nome da raça..." required>
 							</div>
                                 
 						</div>
                         
       						<div class="row">
 								<div class="col-md-12 text-right">
-									<button type="button" class="btn btn-success">Salvar</button>
+									<button type="submit" class="btn btn-success">Salvar</button>
 									<button type="button" class="btn btn-warning">Limpar</button>
 									<button type="button" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
                             
                            </div>
-						</form>
+						 </fieldset>
+                        </form>
 					</div>
 				</div>
 				<!-- section clientes -->

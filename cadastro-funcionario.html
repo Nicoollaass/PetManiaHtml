@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/funcionario.css">
+    
+   	<script type="text/javascript" src="assets/js/validacao-funcionario.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
@@ -75,6 +77,8 @@
 				<!-- /barra de pesquisa -->
 				<!-- section clientes -->
 				<div class="content-main col-md-10">
+                <form class="cmxform" id="clienteForm" method="get" action="">
+                <fieldset>
 					<div class="conteiner-fluid col-md-10">
 						<form action="" method="" accept-charset="utf-8">
                         <div class="row Servico-titulo">
@@ -92,10 +96,10 @@
                         </div>
                             <div class="row">
 								<div class="col-md-8 style-input">
-									<input type="text" name="nome" value="nome" class="form-control " placeholder="nome...">
+									<input type="text" name="nome" value="nome" class="form-control " placeholder="nome..." required>
 								</div>
                                 <div class="col-md-4 form-group">
-									<select name="id_tipo_funcionario" value="id_tipo_funcionario"class="form-control" id="Cliente">
+									<select name="id_tipo_funcionario" value="id_tipo_funcionario"class="form-control" id="Cliente" required>
 										<option>Tipo Funcionário...</option>
 									</select>
 								</div>
@@ -114,17 +118,17 @@
                         	</div>
    							<div class="row">
                             	<div class="col-md-4 form-group">
-									<select name="id_filial" value="id_filial" class="form-control" id="Cliente">
+									<select name="id_filial" value="id_filial" class="form-control" id="Cliente" required>
 										<option>Filial...</option>
 									</select>
 								</div>
                                 <div class="col-md-5 form-group">
-									<select name="funcao" value="funcao" class="form-control" id="Cliente">
+									<select name="funcao" value="funcao" class="form-control" id="Cliente" required>
 										<option>Função...</option>
 									</select>
 								</div>
 								<div class="col-md-3 style-input">
-									<input type="Date" name="data_nascimento" value="data_nascimento" class="form-control " placeholder="data nascimento...">
+									<input type="Date" name="data_nascimento" value="data_nascimento" class="form-control " placeholder="data nascimento..." required>
 								</div>
 							</div>
                             <div class="row">				
@@ -140,27 +144,28 @@
                         	</div>
                             <div class="row">
 								<div class="col-md-4 style-input">
-									<input type="CPF" name="cpf" value="cpf" class="form-control " placeholder="cpf...">
+									<input type="CPF" name="cpf" value="cpf" class="form-control " placeholder="cpf..." required>
 								</div>
 
 								<div class="col-md-4 style-input">
-									<input type="Telefone" name="telefone" value="telefone" class="form-control " placeholder="telefone...">
+									<input type="Telefone" name="telefone" value="telefone" class="form-control " placeholder="telefone..." required>
 								</div>
                                 <div class="col-md-4 style-input">
-									<input type="email" name="email" value="email" class="form-control " placeholder="email...">
+									<input type="email" name="email" value="email" class="form-control " placeholder="email..." required>
 								</div>
 							</div>
                         
       						<div class="row">
 								<div class="col-md-12 text-right">
-									<button type="button" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
+									<button type="submit" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
 									<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
 									<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
                             
                            </div>
-						</form>
+						 </fieldset>
+                        </form>
 					</div>
 				</div>
 				<!-- section clientes -->

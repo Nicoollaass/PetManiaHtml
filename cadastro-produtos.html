@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/produtos.css">
+    
+   	<script type="text/javascript" src="assets/js/validacao-produtos.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
@@ -75,6 +77,8 @@
 				<!-- /barra de pesquisa -->
 				<!-- section clientes -->
 				<div class="content-main col-md-10">
+                <form class="cmxform" id="produtosForm" method="get" action="">
+                <fieldset>
 					<div class="conteiner-fluid">
 						<form action="" method="" accept-charset="utf-8">
 							<div class="row">
@@ -93,10 +97,10 @@
                         
 						<div class="row">								
 							<div class="col-md-6 style-input">
-								<input type="select" name="descricao" value="descricao" class="form-control " placeholder="Descrição...">
+								<input type="select" name="descricao" value="descricao" class="form-control " placeholder="Descrição..." required>
 							</div>
 							<div class="col-md-5 form-group">
-								<select class="form-control" name="id_categoria" value="id_categoria"  id="categoria">
+								<select class="form-control" name="id_categoria" value="id_categoria"  id="categoria" required>
 									<option>Categoria...</option>
 								</select>
 							</div>
@@ -114,27 +118,28 @@
                         </div>
                         <div class="row">								
 							<div class="col-md-5 form-group">
-								<select class="form-control" name="marca" value="marca" id="Cliente">
+								<select class="form-control" name="marca" value="marca" id="Cliente" required>
 									<option>Marca...</option>
 								</select>
 							</div>
                             <div class="col-md-3 style-input">
-								<input type="select" name="preco" value="preco" class="form-control " placeholder="Preço...">
+								<input type="select" name="preco" value="preco" class="form-control " placeholder="Preço..." required>
 							</div>
                             <div class="col-md-3 style-input">
-								<input type="select" name="quantidade" value="quantidade" class="form-control " placeholder="Quantidade...">
+								<input type="select" name="quantidade" value="quantidade" class="form-control " placeholder="Quantidade..." required>
 							</div>
 							
 						</div>
                                 
 							<div class="row margin-right-buffer-8">
 								<div class="col-md-12 text-right ">
-									<button type="button" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
+									<button type="submit" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
 									<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
 									<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
-						</form>
+						 </fieldset>
+                        </form>
 					</div>
 				</div>
 				<!-- section clientes -->
