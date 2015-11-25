@@ -1,0 +1,97 @@
+.Animal-background{
+	background-image:url(../img/cadastro-animais-petMania.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	background-position:center;
+	margin-top:50px;
+    height: 100%;
+	}
+ 
+.Animal-border-radius{
+	border-radius: 10px;
+	background-color:#FFFFFF;
+	opacity: 0.90;
+    filter: alpha(opacity=90);
+	margin-top:20px;
+	}
+	
+.Animal-float-right {float:right};
+
+.top-buffer-menos { margin-top:-20px; }
+.top-buffer-mais { margin-top:20px; }
+
+.Animal-top-buffer-4 { 
+	margin-top:40px;
+	margin-bottom:40px;
+ }
+ 
+ .Animal-Label-bottom {
+	margin-bottom:-10px;
+	}
+	 .Animal-Label-bottom-30 {
+	margin-bottom:-30px;
+	}
+	
+.margin-right-buffer-8 { margin-right:80px; }
+.margin-right-buffer-12 { margin-right:120px; }
+
+/*layout mensagem de validação*/
+
+	/**********************************
+
+Use: animalForm template
+
+***********************************/
+form.animalForm fieldset {
+	margin-bottom: 10px;
+}
+
+form.animalForm legend {
+	padding: 0 2px;
+	font-weight: bold;
+	_margin: 0 -7px; /* IE Win */
+}
+
+form.animalForm label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	cursor: hand;
+}
+
+form.animalForm fieldset p {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+form.animalForm fieldset fieldset {
+	border: none;
+	margin: 3px 0 0;
+}
+
+form.animalForm fieldset fieldset legend {
+	padding: 0 0 5px;
+	font-weight: normal;
+}
+
+form.animalForm fieldset fieldset label {
+	display: block;
+	width: auto;
+}
+
+form.animalForm label { width: 100px; } /* Width of labels */
+form.animalForm fieldset fieldset label { margin-left: 103px; } /* Width plus 3 (html space) */
+form.animalForm label.error {
+	margin-left: 103px;
+	width: 220px;
+}
+
+form.animalForm input.submit {
+	margin-left: 103px;
+}
+
+/*\*//*/ form.animalForm legend { display: inline-block; } /* IE Mac legend fix */
+
+

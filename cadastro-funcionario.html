@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>Cadastro de Funcionários</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./cadastro-cliente_files/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./cadastro-cliente_files/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/funcionario.css">
+    
+   	<script type="text/javascript" src="assets/js/validacao-funcionario.js"></script>
+	<script type="text/javascript" src="./cadastro-cliente_files/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./cadastro-cliente_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./cadastro-cliente_files/main.js"></script>
+
+</head>
+<body>
+	<!-- navegation -->
+	<header class="header">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Icon pet</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Vendas</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listar<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Produto</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Serviços</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Funcionarios</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Clientes</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Animais</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Filiais</a></li>
+							</ul>
+						</li>						
+						<li class="dropdown">
+							<a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendas<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Produto</a></li>
+								<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#">Serviços</a></li>
+							</ul>
+						</li>
+						<li><a href="file:///C:/Users/HERICK/PetManiaHtml/cadastro-cliente.html#agenda">Agendamento de serviços</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>	
+	</header>
+	<!-- /navegation -->
+	<section class="container-main">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- barra de pesquisa -->
+				<div class="control-consulta col-md-2">
+					<h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
+					<div class="input-group custom-search-form">
+						<input type="text" class="form-control" placeholder="Nome...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							</button>
+						</span>
+					</div>
+					<div>
+						<button type="button" class="btn btn-success">Novo registro</button>
+					</div>
+				</div>
+				<!-- /barra de pesquisa -->
+				<!-- section clientes -->
+				<div class="content-main col-md-10">
+                <form class="cmxform" id="clienteForm" method="get" action="">
+                <fieldset>
+					<div class="conteiner-fluid col-md-10">
+						<form action="" method="" accept-charset="utf-8">
+                        <div class="row Servico-titulo">
+                            
+								<div class="col-md-12">
+								  <h1 class="row">Novo Funcionário</h1>
+								</div>	
+						<div class="row">				
+							<div class="col-md-8 Funcionario-Label-bottom">
+								<label ><h4 >Nome:</h4></label>
+							</div>
+							<div class="col-md-3 Funcionario-Label-bottom">
+								<label><h4>Funcionário:</h4></label>
+							</div>
+                        </div>
+                            <div class="row">
+								<div class="col-md-8 style-input">
+									<input type="text" name="nome" value="nome" class="form-control " placeholder="nome..." required>
+								</div>
+                                <div class="col-md-4 form-group">
+									<select name="id_tipo_funcionario" value="id_tipo_funcionario"class="form-control" id="Cliente" required>
+										<option>Tipo Funcionário...</option>
+									</select>
+								</div>
+                            </div>
+ 
+							<div class="row">				
+								<div class="col-md-4 Funcionario-Label-bottom">
+									<label><h4>Filial:</h4></label>
+								</div>
+								<div class="col-md-5 Funcionario-Label-bottom">
+									<label><h4>Função:</h4></label>
+								</div>
+                                <div class="col-md-3 Funcionario-Label-bottom">
+									<label><h4>Data Nascimento:</h4></label>
+								</div>
+                        	</div>
+   							<div class="row">
+                            	<div class="col-md-4 form-group">
+									<select name="id_filial" value="id_filial" class="form-control" id="Cliente" required>
+										<option>Filial...</option>
+									</select>
+								</div>
+                                <div class="col-md-5 form-group">
+									<select name="funcao" value="funcao" class="form-control" id="Cliente" required>
+										<option>Função...</option>
+									</select>
+								</div>
+								<div class="col-md-3 style-input">
+									<input type="Date" name="data_nascimento" value="data_nascimento" class="form-control " placeholder="data nascimento..." required>
+								</div>
+							</div>
+                            <div class="row">				
+								<div class="col-md-4 Funcionario-Label-bottom">
+									<label><h4>Cpf:</h4></label>
+								</div>
+								<div class="col-md-4 Funcionario-Label-bottom">
+									<label><h4>Telefone:</h4></label>
+								</div>
+                                <div class="col-md-3 Funcionario-Label-bottom">
+									<label><h4>E-mail:</h4></label>
+								</div>
+                        	</div>
+                            <div class="row">
+								<div class="col-md-4 style-input">
+									<input type="CPF" name="cpf" value="cpf" class="form-control " placeholder="cpf..." required>
+								</div>
+
+								<div class="col-md-4 style-input">
+									<input type="Telefone" name="telefone" value="telefone" class="form-control " placeholder="telefone..." required>
+								</div>
+                                <div class="col-md-4 style-input">
+									<input type="email" name="email" value="email" class="form-control " placeholder="email..." required>
+								</div>
+							</div>
+                        
+      						<div class="row">
+								<div class="col-md-12 text-right">
+									<button type="submit" name="salvar" value="salvar" class="btn btn-success">Salvar</button>
+									<button type="button" name="limpar" value="limpar" class="btn btn-warning">Limpar</button>
+									<button type="button" name="cancelar" value="cancelar" class="btn btn-danger">Cancelar</button>
+								</div>
+							</div>
+                            
+                           </div>
+						 </fieldset>
+                        </form>
+					</div>
+				</div>
+				<!-- section clientes -->
+			</div>
+		</div>
+	</section>
+
+</body></html>

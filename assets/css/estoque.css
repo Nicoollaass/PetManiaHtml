@@ -1,0 +1,74 @@
+.Estoque-float-right {float:right};
+
+.Estoque-top {
+	margin-top:20px;
+	}
+.Estoque-Label-bottom {
+	margin-bottom:-10px;
+	}
+	
+.Estoque-top-buffer-4 { 
+	margin-top:40px;
+	margin-bottom:40px;
+ }
+
+.margin-right-buffer-8 { margin-right:7%; }
+
+	/**********************************
+
+Use: EstoqueForm template
+
+***********************************/
+form.EstoqueForm fieldset {
+	margin-bottom: 10px;
+}
+
+form.EstoqueForm legend {
+	padding: 0 2px;
+	font-weight: bold;
+	_margin: 0 -7px; /* IE Win */
+}
+
+form.EstoqueForm label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	cursor: hand;
+}
+
+form.EstoqueForm fieldset p {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+form.EstoqueForm fieldset fieldset {
+	border: none;
+	margin: 3px 0 0;
+}
+
+form.EstoqueForm fieldset fieldset legend {
+	padding: 0 0 5px;
+	font-weight: normal;
+}
+
+form.EstoqueForm fieldset fieldset label {
+	display: block;
+	width: auto;
+}
+
+form.EstoqueForm label { width: 100px; } /* Width of labels */
+form.EstoqueForm fieldset fieldset label { margin-left: 103px; } /* Width plus 3 (html space) */
+form.EstoqueForm label.error {
+	margin-left: 103px;
+	width: 220px;
+}
+
+form.EstoqueForm input.submit {
+	margin-left: 103px;
+}
+
+
+
+
+/*\*//*/ form.EstoqueForm legend { display: inline-block; } /* IE Mac legend fix */

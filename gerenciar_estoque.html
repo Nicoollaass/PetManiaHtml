@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gerenciamento de Estoque</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/estoque.css">
+	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+    
+    <script type="text/javascript" src="assets/js/moment.js"></script>
+    <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/daterangepicker.css" />
+       
+        <script type="text/javascript">
+		$(function() {
+		$('input[name="daterange"]').daterangepicker();
+		});
+		</script>
+        <script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                
+                $('#example1').datepicker({
+                    format: "dd/mm/yyyy"
+                });  
+            
+            });
+        </script>
+
+</head>
+<body>
+	<!-- navegation -->
+	<header class="header">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Icon pet</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Relatórios<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Vendas</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listar<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Produto</a></li>
+								<li><a href="#">Serviços</a></li>
+								<li><a href="#">Funcionarios</a></li>
+								<li><a href="#">Clientes</a></li>
+								<li><a href="#">Animais</a></li>
+								<li><a href="#">Filiais</a></li>
+							</ul>
+						</li>						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendas<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Produto</a></li>
+								<li><a href="#">Serviços</a></li>
+							</ul>
+						</li>
+						<li><a href="#agenda">Agendamento de serviços</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>	
+	</header>
+	<!-- /navegation -->
+	<section class="container-main">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- barra de pesquisa -->
+				<div class="control-consulta col-md-2">
+					<h1 class="title-filter">Filtros de pesquisa:<span class="config glyphicon glyphicon-wrench" aria-hidden="true"></span></h1>
+					<div class="form-group">
+					  <select class="form-control" id="sel1">
+					    <option>Categorias</option>
+					    <option>Ração</option>
+					    <option>Brinquedos</option>
+					    <option>Higiene</option>
+					  </select>
+					</div>
+					<div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Cod do Produto...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    	</span>
+                    </div>
+					<!-- /Campo Periodo -->
+					<div class="Estoque-top-buffer-top">
+					<input type="text" name="daterange" class="form-control" value="" placeholder="Período..." />
+					</div>
+					
+					<!--<div class="Estoque-top-buffer-top">
+					<ul class="style-menu">
+						
+						<li class="category">
+							Categorias
+							<span class="glyphicon glyphicon-chevron-right icon-arrow" aria-hidden="true"></span>
+							<ul class="sub-category">
+								<li><input type="checkbox" name="" value="">São bernardo</li>
+								<li><input type="checkbox" name="" value="">Poodle</li>
+								<li><input type="checkbox" name="" value="">Bulldog</li>
+							</ul>
+						</li>
+					</ul>
+					</div>-->
+					<div class="Estoque-top-buffer-4 ">
+						<button type="button" class="btn btn-success">Pesquisar</button>
+					</div>
+				</div>
+				<!-- /barra de pesquisa -->
+				<!-- tabela -->
+				<div class="tabela-main col-md-10">
+					<table class="table table-hover">
+						<caption>Optional table caption.</caption>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Descrição</th>
+								<th>Quantidade</th>
+								<th>Nome</th>
+								<th>Data Entrada</th>
+                    			<th>Data Saida</th>
+                                <th>Preço</th>
+								<th>Categoria</th>
+                    			<th>Marca</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Ração Golden Mega Cães Adultos Frango Premier</td>
+                                <td>8</td>
+								<td>Ração</td>
+							  
+								<td>2015-11-19 01:08:03.000</td>
+                                <td>2015-11-19 04:09:08.000</td>
+							  <td>113.90</td>
+							<td>Ração</td>
+                            <td>Baw Waw</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Ração para bebes</td>
+								<td>4</td>
+								<td>Racção</td>
+								<td>2015-11-19 01:08:03.000</td>
+                                <td>2015-11-19 01:08:03.000	</td>
+							  <td>90.00</td>
+							  <td>Brinquedos</td>
+                              <td>Baw Waw</td>
+								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- /tabela -->
+			</div>
+		</div>
+	</section>
+</body>
+</html>
